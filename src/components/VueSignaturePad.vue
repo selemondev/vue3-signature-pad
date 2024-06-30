@@ -161,18 +161,21 @@ function draw() {
 
 watch(() => props.options.penColor, (newVal) => {
   if (newVal) {
+    canvasOptions.value.option.penColor = newVal
     canvasOptions.value.signaturePad.penColor = newVal
   }
 })
 
 watch(() => props.minWidth, (newVal) => {
   if (newVal) {
+    canvasOptions.value.minWidth = newVal
     canvasOptions.value.signaturePad.minWidth = newVal
   }
 })
 
 watch(() => props.maxWidth, (newVal) => {
   if (newVal) {
+    canvasOptions.value.maxWidth = newVal
     canvasOptions.value.signaturePad.maxWidth = newVal
   }
 })
