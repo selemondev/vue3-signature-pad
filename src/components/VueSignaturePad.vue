@@ -63,6 +63,14 @@ function fromDataURL(url: string) {
   return canvasOptions.value.signaturePad && canvasOptions.value.signaturePad.fromDataURL && canvasOptions.value.signaturePad.fromDataURL(url)
 }
 
+function undo() {
+  const canvasData: any = canvasOptions.value.signaturePad && canvasOptions.value.signaturePad.toData && canvasOptions.value.signaturePad.toData()
+  if (canvasData.length) {
+    canvasData.pop()
+    canvasOptions.value.signaturePad && canvasOptions.value.signaturePad.fromData && canvasOptions.value.signaturePad.fromData(canvasData)
+  }
+};
+
 function addWaterMark(data: WaterMarkObj) {
   if (!(Object.prototype.toString.call(data) === '[object Object]')) {
     throw new Error(`Expected Object, got ${typeof data}.`)
@@ -197,6 +205,7 @@ defineExpose({
   addWaterMark,
   isCanvasEmpty,
   fromDataURL,
+  undo,
 })
 
 onMounted(() => {

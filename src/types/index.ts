@@ -19,8 +19,10 @@ export interface SignatureRef {
   addEventListener?: (type: string, listener: (event: Event) => void, options?: { once?: boolean }) => void
   addWaterMark?: (obj: WaterMarkObj) => void
   fromDataURL?: (url: string) => void
+  fromData?: (data: any[], options?: { clear: boolean }) => void
   toDataURL?: (format?: string) => void
   save?: (t: string) => void
+  toData?: () => void
   clear?: () => void
   isEmpty?: () => void
   undo?: () => void
@@ -34,6 +36,9 @@ export interface SignatureRef {
 export interface CanvasSignatureRef {
   isCanvasEmpty?: () => void
   saveSignature?: (format?: string) => void
+  clearCanvas?: () => void
+  addWaterMark?: (obj: WaterMarkObj) => void
+  fromDataURL?: (url: string) => void
 }
 
 export interface Props {
