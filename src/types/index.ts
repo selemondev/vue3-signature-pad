@@ -31,6 +31,11 @@ export interface SignatureRef {
   penColor?: string
 }
 
+export interface CanvasSignatureRef {
+  isCanvasEmpty?: () => void
+  saveSignature?: (format?: string) => void
+}
+
 export interface Props {
   options: Options
   width: string
