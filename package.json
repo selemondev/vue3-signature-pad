@@ -4,6 +4,16 @@
   "version": "1.0.0",
   "private": true,
   "packageManager": "pnpm@9.1.3",
+  "description": "Vue 3 based smooth signature drawing",
+  "author": "Selemondev",
+  "homepage": "https://github.com/selemondev/vue3-signature-pad#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/selemondev/vue3-signature-pad.git"
+  },
+  "bugs": {
+    "url": "https://github.com/selemondev/vue3-signature-pad/issues"
+  },
   "exports": {
     ".": {
       "types": "./dist/index.d.ts",
