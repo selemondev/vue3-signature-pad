@@ -169,7 +169,7 @@ onMounted(() => {
             @selemondev
           </a>
           <a
-            href="https://github.com/selemondev/marquee" target="_blank"
+            href="https://github.com/selemondev/vue3-signature-pad" target="_blank"
             class="bg-black text-xs font-semibold text-white px-2.5 py-1 rounded-md inline-flex items-center hover:bg-black/80 transition-all duration-200 ease-in"
           >
             <GithubIcon class="mr-1 size-4" />
