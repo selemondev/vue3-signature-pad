@@ -178,8 +178,8 @@ onMounted(() => {
         </div>
       </div>
       <div class="flex flex-col space-y-2">
-        <div class="bg-white p-4 rounded-md">
-          <div class="bg-gray-100 relative rounded-md">
+        <div class="p-4 bg-white rounded-md">
+          <div class="relative bg-gray-100 rounded-md">
             <VueSignaturePad
               ref="signature" height="400px" width="950px" :max-width="options.maxWidth"
               :min-width="options.minWidth" :options="{
@@ -187,9 +187,9 @@ onMounted(() => {
               }"
             />
 
-            <div class="absolute top-3 right-4 flex flex-col space-y-2">
+            <div class="absolute flex flex-col space-y-2 top-3 right-4">
               <button
-                type="button" class="bg-white p-2 rounded-md shadow-md grid place-items-center"
+                type="button" class="grid p-2 bg-white rounded-md shadow-md place-items-center"
                 @click="handleUndo"
               >
                 <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24">
@@ -200,7 +200,7 @@ onMounted(() => {
                 </svg>
               </button>
               <button
-                type="button" class="bg-white p-2 rounded-md shadow-md grid place-items-center"
+                type="button" class="grid p-2 bg-white rounded-md shadow-md place-items-center"
                 @click="handleClearCanvas"
               >
                 <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 14 14">
@@ -211,7 +211,7 @@ onMounted(() => {
                 </svg>
               </button>
               <button
-                type="button" class="bg-white p-2 rounded-md shadow-md grid place-items-center"
+                type="button" class="grid p-2 bg-white rounded-md shadow-md place-items-center"
                 @click="handleSaveSignature"
               >
                 <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24">
@@ -222,14 +222,14 @@ onMounted(() => {
                 </svg>
               </button>
               <button
-                type="button" class="bg-white p-2 rounded-md shadow-md grid place-items-center"
+                type="button" class="grid p-2 bg-white rounded-md shadow-md place-items-center"
               >
                 <GithubIcon class="size-4" />
               </button>
             </div>
           </div>
         </div>
-        <div class="bg-white w-full flex items-center p-3 rounded-md justify-between">
+        <div class="flex items-center justify-between w-full p-3 bg-white rounded-md">
           <div>
             <h1 class="text-lg">
               Choose pen color
@@ -239,7 +239,7 @@ onMounted(() => {
             <div v-for="color in colors" :key="color.color">
               <button
                 type="button" :style="`background: ${color.color}`"
-                class="w-8 h-8 grid place-items-center rounded-full" @click="options.penColor = color.color"
+                class="grid w-8 h-8 rounded-full place-items-center" @click="options.penColor = color.color"
               >
                 <p v-if="options.penColor === color.color">
                   <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 48 48">
@@ -255,7 +255,7 @@ onMounted(() => {
           </div>
         </div>
 
-        <div class="bg-white w-full flex items-center p-3 rounded-md justify-between">
+        <div class="flex items-center justify-between w-full p-3 bg-white rounded-md">
           <div>
             <h1 class="text-lg">
               Choose maximum pen line thickness
@@ -267,7 +267,7 @@ onMounted(() => {
           </div>
         </div>
 
-        <div class="bg-white w-full flex items-center p-3 rounded-md justify-between">
+        <div class="flex items-center justify-between w-full p-3 bg-white rounded-md">
           <div>
             <h1 class="text-lg">
               Choose minimum pen line thickness
@@ -302,7 +302,7 @@ onMounted(() => {
         </h3>
 
         <p class="text-sm">
-          You can get the svgs from the <a href="https://icones.js.org/" target="_blank" class="text-blue-500 hover:text-blue-600 transition-all duration-200 ease-in underline">Icones</a> library.
+          You can get the svgs from the <a href="https://icones.js.org/" target="_blank" class="text-blue-500 underline transition-all duration-200 ease-in hover:text-blue-600">Icones</a> library.
         </p>
 
         <VCodeBlock
@@ -348,8 +348,8 @@ function handleSaveSignature() {
 
 <template>
   <div class='flex flex-col space-y-2'>
-    <div class='bg-white p-4 rounded-md'>
-      <div class='bg-gray-100 relative rounded-md'>
+    <div class='p-4 bg-white rounded-md'>
+      <div class='relative bg-gray-100 rounded-md'>
         <VueSignaturePad
           ref='signature'
           height='400px'
@@ -362,10 +362,10 @@ function handleSaveSignature() {
           }'
         />
 
-        <div class='absolute top-3 right-4 flex flex-col space-y-2'>
+        <div class='absolute flex flex-col space-y-2 top-3 right-4'>
           <button
             type='button'
-            class='bg-white p-2 rounded-md shadow-md grid place-items-center'
+            class='grid p-2 bg-white rounded-md shadow-md place-items-center'
             @click='handleUndo'
           >
             <svg
@@ -386,7 +386,7 @@ function handleSaveSignature() {
           </button>
           <button
             type='button'
-            class='bg-white p-2 rounded-md shadow-md grid place-items-center'
+            class='grid p-2 bg-white rounded-md shadow-md place-items-center'
             @click='handleClearCanvas'
           >
             <svg
@@ -406,7 +406,7 @@ function handleSaveSignature() {
           </button>
           <button
             type='button'
-            class='bg-white p-2 rounded-md shadow-md grid place-items-center'
+            class='grid p-2 bg-white rounded-md shadow-md place-items-center'
             @click='handleSaveSignature'
           >
             <svg
@@ -424,7 +424,7 @@ function handleSaveSignature() {
         </div>
       </div>
     </div>
-    <div class='bg-white w-full flex items-center p-3 rounded-md justify-between'>
+    <div class='flex items-center justify-between w-full p-3 bg-white rounded-md'>
       <div>
         <h1 class='text-lg'>Choose pen color</h1>
       </div>
@@ -433,7 +433,7 @@ function handleSaveSignature() {
           <button
             type='button'
             :style='{ background: color.color }'
-            class='w-8 h-8 grid place-items-center rounded-full'
+            class='grid w-8 h-8 rounded-full place-items-center'
             @click='options.penColor = color.color'
           >
             <p v-if='options.penColor === color.color'>
@@ -459,7 +459,7 @@ function handleSaveSignature() {
         </div>
       </div>
     </div>
-    <div class='bg-white w-full flex items-center p-3 rounded-md justify-between'>
+    <div class='flex items-center justify-between w-full p-3 bg-white rounded-md'>
       <div>
         <h1 class='text-lg'>Choose maximum pen line thickness</h1>
       </div>
@@ -468,7 +468,7 @@ function handleSaveSignature() {
         <p>{{ options.maxWidth }}</p>
       </div>
     </div>
-    <div class='bg-white w-full flex items-center p-3 rounded-md justify-between'>
+    <div class='flex items-center justify-between w-full p-3 bg-white rounded-md'>
       <div>
         <h1 class='text-lg'>Choose minimum pen line thickness</h1>
       </div>
@@ -490,9 +490,10 @@ function handleSaveSignature() {
           Nuxt 3
         </h3>
         <p class="text-sm">
-          If you are using Nuxt 3, you can simply install it by using nuxi as shown below:
+          If you are using Nuxt 3, you can simply install it by using nuxi as shown below and also add TypeScript as a dev dependency:
         </p>
         <VCodeBlock :code="nuxiSnippet" highlightjs lang="typescript" theme="atom-one-light" />
+        <VCodeBlock code="npm install --save-dev Typescript" highlightjs lang="typescript" theme="atom-one-light" />
       </div>
 
       <div class="space-y-3">
@@ -527,8 +528,8 @@ function handleSaveSignature() {
           Example with Watermark
         </h3>
         <div class="flex flex-col space-y-2">
-          <div class="bg-white p-4 rounded-md">
-            <div class="bg-gray-100 relative rounded-md">
+          <div class="p-4 bg-white rounded-md">
+            <div class="relative bg-gray-100 rounded-md">
               <VueSignaturePad
                 ref="signatureWaterMark" height="400px" width="950px" :max-width="options.maxWidth"
                 :min-width="options.minWidth" :options="{
@@ -536,9 +537,9 @@ function handleSaveSignature() {
                 }"
               />
 
-              <div class="absolute top-3 right-4 flex flex-col space-y-2">
+              <div class="absolute flex flex-col space-y-2 top-3 right-4">
                 <button
-                  type="button" class="bg-white p-2 rounded-md shadow-md grid place-items-center"
+                  type="button" class="grid p-2 bg-white rounded-md shadow-md place-items-center"
                   @click="handleUndoWaterMark"
                 >
                   <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24">
@@ -549,7 +550,7 @@ function handleSaveSignature() {
                   </svg>
                 </button>
                 <button
-                  type="button" class="bg-white p-2 rounded-md shadow-md grid place-items-center"
+                  type="button" class="grid p-2 bg-white rounded-md shadow-md place-items-center"
                   @click="handleClearCanvasWaterMark"
                 >
                   <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 14 14">
@@ -560,7 +561,7 @@ function handleSaveSignature() {
                   </svg>
                 </button>
                 <button
-                  type="button" class="bg-white p-2 rounded-md shadow-md grid place-items-center"
+                  type="button" class="grid p-2 bg-white rounded-md shadow-md place-items-center"
                   @click="handleSaveSignatureWaterMark"
                 >
                   <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24">
@@ -571,14 +572,14 @@ function handleSaveSignature() {
                   </svg>
                 </button>
                 <button
-                  type="button" class="bg-white p-2 rounded-md shadow-md grid place-items-center"
+                  type="button" class="grid p-2 bg-white rounded-md shadow-md place-items-center"
                 >
                   <GithubIcon class="size-4" />
                 </button>
               </div>
             </div>
           </div>
-          <div class="bg-white w-full flex items-center p-3 rounded-md justify-between">
+          <div class="flex items-center justify-between w-full p-3 bg-white rounded-md">
             <div>
               <h1 class="text-lg">
                 Choose pen color
@@ -588,7 +589,7 @@ function handleSaveSignature() {
               <div v-for="color in colors" :key="color.color">
                 <button
                   type="button" :style="{ background: color.color }"
-                  class="w-8 h-8 grid place-items-center rounded-full" @click="options.penColor = color.color"
+                  class="grid w-8 h-8 rounded-full place-items-center" @click="options.penColor = color.color"
                 >
                   <p v-if="options.penColor === color.color">
                     <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 48 48">
@@ -604,7 +605,7 @@ function handleSaveSignature() {
             </div>
           </div>
 
-          <div class="bg-white w-full flex items-center p-3 rounded-md justify-between">
+          <div class="flex items-center justify-between w-full p-3 bg-white rounded-md">
             <div>
               <h1 class="text-lg">
                 Choose maximum pen line thickness
@@ -616,7 +617,7 @@ function handleSaveSignature() {
             </div>
           </div>
 
-          <div class="bg-white w-full flex items-center p-3 rounded-md justify-between">
+          <div class="flex items-center justify-between w-full p-3 bg-white rounded-md">
             <div>
               <h1 class="text-lg">
                 Choose minimum pen line thickness
