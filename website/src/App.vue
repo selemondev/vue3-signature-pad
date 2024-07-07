@@ -221,11 +221,6 @@ onMounted(() => {
                   />
                 </svg>
               </button>
-              <button
-                type="button" class="grid p-2 bg-white rounded-md shadow-md place-items-center"
-              >
-                <GithubIcon class="size-4" />
-              </button>
             </div>
           </div>
         </div>
@@ -310,7 +305,6 @@ onMounted(() => {
 import { onMounted, ref } from 'vue'
 import { VueSignaturePad } from '@selemondev/vue3-signature-pad'
 import type { CanvasSignatureRef } from '@selemondev/vue3-signature-pad'
-import GithubIcon from './components/icons/GithubIcon.vue'
 
 const options = ref({
   penColor: 'rgb(0,0,0)',
@@ -570,11 +564,6 @@ function handleSaveSignature() {
                       d="M21 7v14H3V3h14zm-2 .85L16.15 5H5v14h14zM12 18q1.25 0 2.125-.875T15 15t-.875-2.125T12 12t-2.125.875T9 15t.875 2.125T12 18m-6-8h9V6H6zM5 7.85V19V5z"
                     />
                   </svg>
-                </button>
-                <button
-                  type="button" class="grid p-2 bg-white rounded-md shadow-md place-items-center"
-                >
-                  <GithubIcon class="size-4" />
                 </button>
               </div>
             </div>
