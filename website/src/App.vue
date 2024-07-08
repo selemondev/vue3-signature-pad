@@ -28,34 +28,119 @@ const colors = [
   },
 ]
 const signature = ref<CanvasSignatureRef>()
+const signatureLaptop = ref<CanvasSignatureRef>()
+const signatureTablet = ref<CanvasSignatureRef>()
 const signatureWaterMark = ref<CanvasSignatureRef>()
+const signatureWaterMarkTablet = ref<CanvasSignatureRef>()
+const signatureWaterMarkLaptop = ref<CanvasSignatureRef>()
+
+function handleUndoLaptop() {
+  return signatureLaptop.value?.undo && signatureLaptop.value?.undo()
+}
+
+function handleClearCanvasLaptop() {
+  return signatureLaptop.value?.clearCanvas && signatureLaptop.value?.clearCanvas()
+}
+
+function handleSaveSignatureLaptop() {
+  return signatureLaptop.value?.saveSignature && alert(signatureLaptop.value?.saveSignature())
+}
+
+
+function handleUndoTablet() {
+  return signatureTablet.value?.undo && signatureTablet.value?.undo()
+}
+
+function handleClearCanvasTablet() {
+  return signatureTablet.value?.clearCanvas && signatureTablet.value?.clearCanvas()
+}
+
+function handleSaveSignatureTablet() {
+  return signatureTablet.value?.saveSignature && alert(signatureTablet.value?.saveSignature())
+}
 
 function handleUndo() {
   return signature.value?.undo && signature.value?.undo()
 }
 
-function handleUndoWaterMark() {
-  return signatureWaterMark.value?.undo && signatureWaterMark.value?.undo()
-}
 
 function handleClearCanvas() {
   return signature.value?.clearCanvas && signature.value?.clearCanvas()
-}
-
-function handleClearCanvasWaterMark() {
-  return signatureWaterMark.value?.clearCanvas && signatureWaterMark.value?.clearCanvas()
 }
 
 function handleSaveSignature() {
   return signature.value?.saveSignature && alert(signature.value?.saveSignature())
 }
 
-function handleSaveSignatureWaterMark() {
+
+function handleUndoWaterMarkLaptop() {
+  return signatureWaterMarkLaptop.value?.undo && signatureWaterMarkLaptop.value?.undo()
+}
+
+function handleClearCanvasWaterMarkLaptop() {
+  return signatureWaterMarkLaptop.value?.clearCanvas && signatureWaterMarkLaptop.value?.clearCanvas()
+}
+
+function handleSaveSignatureWaterMarkLaptop() {
+  return signatureWaterMarkLaptop.value?.saveSignature && alert(signatureWaterMarkLaptop.value?.saveSignature())
+}
+
+
+function handleUndoWaterMarkTablet() {
+  return signatureWaterMarkTablet.value?.undo && signatureWaterMarkTablet.value?.undo()
+}
+
+function handleClearCanvasWaterMarkTablet() {
+  return signatureWaterMarkTablet.value?.clearCanvas && signatureWaterMarkTablet.value?.clearCanvas()
+}
+
+function handleSaveSignatureWaterMarkTablet() {
+  return signatureWaterMarkTablet.value?.saveSignature && alert(signatureWaterMarkTablet.value?.saveSignature())
+}
+
+function handleWaterMarkUndo() {
+  return signatureWaterMark.value?.undo && signatureWaterMark.value?.undo()
+}
+
+
+function handleClearWaterMarkCanvas() {
+  return signatureWaterMark.value?.clearCanvas && signatureWaterMark.value?.clearCanvas()
+}
+
+function handleSaveWaterMarkSignature() {
   return signatureWaterMark.value?.saveSignature && alert(signatureWaterMark.value?.saveSignature())
 }
 
 function handleAddWaterMark() {
   return signatureWaterMark.value?.addWaterMark && signatureWaterMark.value.addWaterMark({
+    text: 'Selemondev',
+    font: '20px Sans',
+    style: 'all',
+    fillStyle: 'blue',
+    strokeStyle: 'blue',
+    x: 830,
+    y: 380,
+    sx: 830,
+    sy: 380,
+  })
+};
+
+function handleAddWaterMarkLaptop() {
+  return signatureWaterMarkLaptop.value?.addWaterMark && signatureWaterMarkLaptop.value.addWaterMark({
+    text: 'Selemondev',
+    font: '20px Sans',
+    style: 'all',
+    fillStyle: 'blue',
+    strokeStyle: 'blue',
+    x: 830,
+    y: 380,
+    sx: 830,
+    sy: 380,
+  })
+}
+
+function handleAddWaterMarkTablet() {
+  return signatureWaterMarkTablet.value?.addWaterMark && signatureWaterMarkTablet.value.addWaterMark({
     text: 'Selemondev',
     font: '20px Sans',
     style: 'all',
@@ -139,13 +224,15 @@ export interface CanvasOptions {
 `)
 
 onMounted(() => {
-  handleAddWaterMark()
+  handleAddWaterMark();
+  handleAddWaterMarkTablet();
+  handleAddWaterMarkLaptop();
 })
 </script>
 
 <template>
-  <div class="min-h-screen bg-stone-100/90">
-    <div class="max-w-screen-lg px-4 py-6 mx-auto space-y-6">
+  <div class="min-h-screen relative w-full bg-stone-100/90">
+    <div class="px-4 py-6 space-y-6">
       <div class="space-y-2 md:flex md:justify-between">
         <div>
           <h1 class="text-2xl font-semibold">
@@ -180,14 +267,37 @@ onMounted(() => {
       <div class="flex flex-col space-y-2">
         <div class="p-4 bg-white rounded-md">
           <div class="relative bg-gray-100 rounded-md">
-            <VueSignaturePad
-              ref="signature" height="400px" width="950px" :max-width="options.maxWidth"
-              :min-width="options.minWidth" :options="{
-                penColor: options.penColor, backgroundColor: options.backgroundColor,
-              }"
-            />
+            <div class="hidden lg:block">
+              <VueSignaturePad
+                ref="signatureLaptop" height="400px" width="950px" :max-width="options.maxWidth"
+                 :clear-on-resize="true"
+                :min-width="options.minWidth" :options="{
+                  penColor: options.penColor, backgroundColor: options.backgroundColor,
+                }"
+              />
+            </div>
 
-            <div class="absolute flex flex-col space-y-2 top-3 right-4">
+            <div class="hidden md:block lg:hidden">
+              <VueSignaturePad
+                ref="signatureTablet" height="400px" width="695px" :max-width="options.maxWidth"
+                :clear-on-resize="true"
+                :min-width="options.minWidth" :options="{
+                  penColor: options.penColor, backgroundColor: options.backgroundColor,
+                }"
+              />
+            </div>
+
+            <div class="block md:hidden">
+              <VueSignaturePad
+                ref="signature" height="400px" width="250px" :max-width="options.maxWidth"
+                 :clear-on-resize="true"
+                :min-width="options.minWidth" :options="{
+                  penColor: options.penColor, backgroundColor: options.backgroundColor,
+                }"
+              />
+            </div>
+
+            <div class="absolute block md:hidden flex flex-col space-y-2 top-3 right-4">
               <button
                 type="button" class="grid p-2 bg-white rounded-md shadow-md place-items-center"
                 @click="handleUndo"
@@ -222,6 +332,79 @@ onMounted(() => {
                 </svg>
               </button>
             </div>
+
+            <div class="absolute hidden md:block lg:hidden flex flex-col space-y-2 top-3 right-4">
+              <button
+                type="button" class="grid p-2 bg-white rounded-md shadow-md place-items-center"
+                @click="handleUndoTablet"
+              >
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24">
+                  <path
+                    fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="M10 8H5V3m.291 13.357a8 8 0 1 0 .188-8.991"
+                  />
+                </svg>
+              </button>
+              <button
+                type="button" class="grid p-2 bg-white rounded-md shadow-md place-items-center"
+                @click="handleClearCanvasTablet"
+              >
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 14 14">
+                  <path
+                    fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round"
+                    d="M11.5 8.5h-9l-.76 3.8a1 1 0 0 0 .21.83a1 1 0 0 0 .77.37h8.56a1.002 1.002 0 0 0 .77-.37a1.001 1.001 0 0 0 .21-.83zm0-3a1 1 0 0 1 1 1v2h-11v-2a1 1 0 0 1 1-1H4a1 1 0 0 0 1-1v-2a2 2 0 1 1 4 0v2a1 1 0 0 0 1 1zm-3 8V11"
+                  />
+                </svg>
+              </button>
+              <button
+                type="button" class="grid p-2 bg-white rounded-md shadow-md place-items-center"
+                @click="handleSaveSignatureTablet"
+              >
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24">
+                  <path
+                    fill="#000"
+                    d="M21 7v14H3V3h14zm-2 .85L16.15 5H5v14h14zM12 18q1.25 0 2.125-.875T15 15t-.875-2.125T12 12t-2.125.875T9 15t.875 2.125T12 18m-6-8h9V6H6zM5 7.85V19V5z"
+                  />
+                </svg>
+              </button>
+            </div>
+
+            <div class="absolute hidden lg:block flex flex-col space-y-2 top-3 right-4">
+              <button
+                type="button" class="grid p-2 bg-white rounded-md shadow-md place-items-center"
+                @click="handleUndoLaptop"
+              >
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24">
+                  <path
+                    fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="M10 8H5V3m.291 13.357a8 8 0 1 0 .188-8.991"
+                  />
+                </svg>
+              </button>
+              <button
+                type="button" class="grid p-2 bg-white rounded-md shadow-md place-items-center"
+                @click="handleClearCanvasLaptop"
+              >
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 14 14">
+                  <path
+                    fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round"
+                    d="M11.5 8.5h-9l-.76 3.8a1 1 0 0 0 .21.83a1 1 0 0 0 .77.37h8.56a1.002 1.002 0 0 0 .77-.37a1.001 1.001 0 0 0 .21-.83zm0-3a1 1 0 0 1 1 1v2h-11v-2a1 1 0 0 1 1-1H4a1 1 0 0 0 1-1v-2a2 2 0 1 1 4 0v2a1 1 0 0 0 1 1zm-3 8V11"
+                  />
+                </svg>
+              </button>
+              <button
+                type="button" class="grid p-2 bg-white rounded-md shadow-md place-items-center"
+                @click="handleSaveSignatureLaptop"
+              >
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24">
+                  <path
+                    fill="#000"
+                    d="M21 7v14H3V3h14zm-2 .85L16.15 5H5v14h14zM12 18q1.25 0 2.125-.875T15 15t-.875-2.125T12 12t-2.125.875T9 15t.875 2.125T12 18m-6-8h9V6H6zM5 7.85V19V5z"
+                  />
+                </svg>
+              </button>
+            </div>
+
           </div>
         </div>
         <div class="flex items-center justify-between w-full p-3 bg-white rounded-md">
@@ -494,14 +677,14 @@ function handleSaveSignature() {
         <h3 class="font-semibold">
           Props
         </h3>
-        <PropsTable />
+        <!-- <PropsTable /> -->
       </div>
 
       <div class="space-y-3">
         <h3 class="font-semibold">
           Events
         </h3>
-        <EventsTable />
+        <!-- <EventsTable /> -->
       </div>
 
       <div class="space-y-3">
@@ -521,101 +704,146 @@ function handleSaveSignature() {
         <h3 class="font-semibold">
           Example with Watermark
         </h3>
-        <div class="flex flex-col space-y-2">
-          <div class="p-4 bg-white rounded-md">
-            <div class="relative bg-gray-100 rounded-md">
+        <div class="p-4 bg-white rounded-md">
+          <div class="relative bg-gray-100 rounded-md">
+            <div class="hidden lg:block">
               <VueSignaturePad
-                ref="signatureWaterMark" height="400px" width="950px" :max-width="options.maxWidth"
+                ref="signatureWaterMarkLaptop" height="400px" width="950px" :max-width="options.maxWidth"
+                 :clear-on-resize="true"
                 :min-width="options.minWidth" :options="{
                   penColor: options.penColor, backgroundColor: options.backgroundColor,
                 }"
               />
+            </div>
 
-              <div class="absolute flex flex-col space-y-2 top-3 right-4">
-                <button
-                  type="button" class="grid p-2 bg-white rounded-md shadow-md place-items-center"
-                  @click="handleUndoWaterMark"
-                >
-                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24">
-                    <path
-                      fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                      d="M10 8H5V3m.291 13.357a8 8 0 1 0 .188-8.991"
-                    />
-                  </svg>
-                </button>
-                <button
-                  type="button" class="grid p-2 bg-white rounded-md shadow-md place-items-center"
-                  @click="handleClearCanvasWaterMark"
-                >
-                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 14 14">
-                    <path
-                      fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round"
-                      d="M11.5 8.5h-9l-.76 3.8a1 1 0 0 0 .21.83a1 1 0 0 0 .77.37h8.56a1.002 1.002 0 0 0 .77-.37a1.001 1.001 0 0 0 .21-.83zm0-3a1 1 0 0 1 1 1v2h-11v-2a1 1 0 0 1 1-1H4a1 1 0 0 0 1-1v-2a2 2 0 1 1 4 0v2a1 1 0 0 0 1 1zm-3 8V11"
-                    />
-                  </svg>
-                </button>
-                <button
-                  type="button" class="grid p-2 bg-white rounded-md shadow-md place-items-center"
-                  @click="handleSaveSignatureWaterMark"
-                >
-                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24">
-                    <path
-                      fill="#000"
-                      d="M21 7v14H3V3h14zm-2 .85L16.15 5H5v14h14zM12 18q1.25 0 2.125-.875T15 15t-.875-2.125T12 12t-2.125.875T9 15t.875 2.125T12 18m-6-8h9V6H6zM5 7.85V19V5z"
-                    />
-                  </svg>
-                </button>
-              </div>
+            <div class="hidden md:block lg:hidden">
+              <VueSignaturePad
+                ref="signatureWaterMarkTablet" height="400px" width="695px" :max-width="options.maxWidth"
+                :clear-on-resize="true"
+                :min-width="options.minWidth" :options="{
+                  penColor: options.penColor, backgroundColor: options.backgroundColor,
+                }"
+              />
             </div>
-          </div>
-          <div class="flex items-center justify-between w-full p-3 bg-white rounded-md">
-            <div>
-              <h1 class="text-lg">
-                Choose pen color
-              </h1>
-            </div>
-            <div class="flex items-center space-x-4">
-              <div v-for="color in colors" :key="color.color">
-                <button
-                  type="button" :style="{ background: color.color }"
-                  class="grid w-8 h-8 rounded-full place-items-center" @click="options.penColor = color.color"
-                >
-                  <p v-if="options.penColor === color.color">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 48 48">
-                      <path
-                        fill="#ffffff" fill-rule="evenodd" stroke="#ffffff" stroke-linecap="round"
-                        stroke-linejoin="round" stroke-width="4" d="m4 24l5-5l10 10L39 9l5 5l-25 25z"
-                        clip-rule="evenodd"
-                      />
-                    </svg>
-                  </p>
-                </button>
-              </div>
-            </div>
-          </div>
 
-          <div class="flex items-center justify-between w-full p-3 bg-white rounded-md">
-            <div>
-              <h1 class="text-lg">
-                Choose maximum pen line thickness
-              </h1>
+            <div class="block md:hidden">
+              <VueSignaturePad
+                ref="signatureWaterMark" height="400px" width="250px" :max-width="options.maxWidth"
+                 :clear-on-resize="true"
+                :min-width="options.minWidth" :options="{
+                  penColor: options.penColor, backgroundColor: options.backgroundColor,
+                }"
+              />
             </div>
-            <div class="flex items-center space-x-4">
-              <input v-model="options.maxWidth" type="range" :min="0" :max="10">
-              <p> {{ options.maxWidth }}</p>
-            </div>
-          </div>
 
-          <div class="flex items-center justify-between w-full p-3 bg-white rounded-md">
-            <div>
-              <h1 class="text-lg">
-                Choose minimum pen line thickness
-              </h1>
+            <div class="absolute block md:hidden flex flex-col space-y-2 top-3 right-4">
+              <button
+                type="button" class="grid p-2 bg-white rounded-md shadow-md place-items-center"
+                @click="handleWaterMarkUndo"
+              >
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24">
+                  <path
+                    fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="M10 8H5V3m.291 13.357a8 8 0 1 0 .188-8.991"
+                  />
+                </svg>
+              </button>
+              <button
+                type="button" class="grid p-2 bg-white rounded-md shadow-md place-items-center"
+                @click="handleClearWaterMarkCanvas"
+              >
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 14 14">
+                  <path
+                    fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round"
+                    d="M11.5 8.5h-9l-.76 3.8a1 1 0 0 0 .21.83a1 1 0 0 0 .77.37h8.56a1.002 1.002 0 0 0 .77-.37a1.001 1.001 0 0 0 .21-.83zm0-3a1 1 0 0 1 1 1v2h-11v-2a1 1 0 0 1 1-1H4a1 1 0 0 0 1-1v-2a2 2 0 1 1 4 0v2a1 1 0 0 0 1 1zm-3 8V11"
+                  />
+                </svg>
+              </button>
+              <button
+                type="button" class="grid p-2 bg-white rounded-md shadow-md place-items-center"
+                @click="handleSaveWaterMarkSignature"
+              >
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24">
+                  <path
+                    fill="#000"
+                    d="M21 7v14H3V3h14zm-2 .85L16.15 5H5v14h14zM12 18q1.25 0 2.125-.875T15 15t-.875-2.125T12 12t-2.125.875T9 15t.875 2.125T12 18m-6-8h9V6H6zM5 7.85V19V5z"
+                  />
+                </svg>
+              </button>
             </div>
-            <div class="flex items-center space-x-4">
-              <input v-model="options.minWidth" type="range" :min="0" :max="10">
-              <p> {{ options.minWidth }}</p>
+
+            <div class="absolute hidden md:block lg:hidden flex flex-col space-y-2 top-3 right-4">
+              <button
+                type="button" class="grid p-2 bg-white rounded-md shadow-md place-items-center"
+                @click="handleUndoWaterMarkTablet"
+              >
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24">
+                  <path
+                    fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="M10 8H5V3m.291 13.357a8 8 0 1 0 .188-8.991"
+                  />
+                </svg>
+              </button>
+              <button
+                type="button" class="grid p-2 bg-white rounded-md shadow-md place-items-center"
+                @click="handleClearCanvasWaterMarkTablet"
+              >
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 14 14">
+                  <path
+                    fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round"
+                    d="M11.5 8.5h-9l-.76 3.8a1 1 0 0 0 .21.83a1 1 0 0 0 .77.37h8.56a1.002 1.002 0 0 0 .77-.37a1.001 1.001 0 0 0 .21-.83zm0-3a1 1 0 0 1 1 1v2h-11v-2a1 1 0 0 1 1-1H4a1 1 0 0 0 1-1v-2a2 2 0 1 1 4 0v2a1 1 0 0 0 1 1zm-3 8V11"
+                  />
+                </svg>
+              </button>
+              <button
+                type="button" class="grid p-2 bg-white rounded-md shadow-md place-items-center"
+                @click="handleSaveSignatureWaterMarkTablet"
+              >
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24">
+                  <path
+                    fill="#000"
+                    d="M21 7v14H3V3h14zm-2 .85L16.15 5H5v14h14zM12 18q1.25 0 2.125-.875T15 15t-.875-2.125T12 12t-2.125.875T9 15t.875 2.125T12 18m-6-8h9V6H6zM5 7.85V19V5z"
+                  />
+                </svg>
+              </button>
             </div>
+
+            <div class="absolute hidden lg:block flex flex-col space-y-2 top-3 right-4">
+              <button
+                type="button" class="grid p-2 bg-white rounded-md shadow-md place-items-center"
+                @click="handleUndoWaterMarkLaptop"
+              >
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24">
+                  <path
+                    fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="M10 8H5V3m.291 13.357a8 8 0 1 0 .188-8.991"
+                  />
+                </svg>
+              </button>
+              <button
+                type="button" class="grid p-2 bg-white rounded-md shadow-md place-items-center"
+                @click="handleClearCanvasWaterMarkLaptop"
+              >
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 14 14">
+                  <path
+                    fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round"
+                    d="M11.5 8.5h-9l-.76 3.8a1 1 0 0 0 .21.83a1 1 0 0 0 .77.37h8.56a1.002 1.002 0 0 0 .77-.37a1.001 1.001 0 0 0 .21-.83zm0-3a1 1 0 0 1 1 1v2h-11v-2a1 1 0 0 1 1-1H4a1 1 0 0 0 1-1v-2a2 2 0 1 1 4 0v2a1 1 0 0 0 1 1zm-3 8V11"
+                  />
+                </svg>
+              </button>
+              <button
+                type="button" class="grid p-2 bg-white rounded-md shadow-md place-items-center"
+                @click="handleSaveSignatureWaterMarkLaptop"
+              >
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24">
+                  <path
+                    fill="#000"
+                    d="M21 7v14H3V3h14zm-2 .85L16.15 5H5v14h14zM12 18q1.25 0 2.125-.875T15 15t-.875-2.125T12 12t-2.125.875T9 15t.875 2.125T12 18m-6-8h9V6H6zM5 7.85V19V5z"
+                  />
+                </svg>
+              </button>
+            </div>
+
           </div>
         </div>
       </div>

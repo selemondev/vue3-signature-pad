@@ -1,5 +1,5 @@
 <template>
-  <table class="min-w-full bg-white border">
+  <table class="bg-white border">
     <thead>
       <tr>
         <th class="px-6 py-3 border-b font-sans border-gray-300 text-left leading-4 tracking-wider">
