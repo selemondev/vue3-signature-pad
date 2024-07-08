@@ -1,5 +1,6 @@
 <template>
-  <table class="min-w-full rounded-md bg-white">
+  <div class="overflow-x-auto">
+    <table class="rounded-md bg-white">
     <thead>
       <tr>
         <th class="px-6 py-3 border-b font-sans border-gray-300 text-left leading-4 tracking-wider">
@@ -161,4 +162,5 @@
       </tr>
     </tbody>
   </table>
+  </div>
 </template>

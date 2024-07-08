@@ -231,8 +231,8 @@ onMounted(() => {
 </script>
 
 <template>
-  <div class="min-h-screen relative w-full bg-stone-100/90">
-    <div class="px-4 py-6 space-y-6">
+  <div class=" bg-stone-100/90">
+    <div class="max-w-screen-lg px-4 py-6 mx-auto space-y-4">
       <div class="space-y-2 md:flex md:justify-between">
         <div>
           <h1 class="text-2xl font-semibold">
@@ -677,14 +677,14 @@ function handleSaveSignature() {
         <h3 class="font-semibold">
           Props
         </h3>
-        <!-- <PropsTable /> -->
+          <PropsTable />
       </div>
 
       <div class="space-y-3">
         <h3 class="font-semibold">
           Events
         </h3>
-        <!-- <EventsTable /> -->
+        <EventsTable />
       </div>
 
       <div class="space-y-3">

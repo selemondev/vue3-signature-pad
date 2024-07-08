@@ -1,5 +1,6 @@
 <template>
-  <table class="bg-white border">
+  <div class="overflow-x-auto">
+    <table class="bg-white border table-auto">
     <thead>
       <tr>
         <th class="px-6 py-3 border-b font-sans border-gray-300 text-left leading-4 tracking-wider">
@@ -112,4 +113,5 @@
       </tr>
     </tbody>
   </table>
+  </div>
 </template>
