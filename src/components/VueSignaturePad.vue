@@ -1,3 +1,4 @@
+<!-- eslint-disable ts/no-unused-expressions -->
 <!-- eslint-disable ts/ban-ts-comment -->
 <script setup lang='ts'>
 import SignaturePad from 'signature_pad'
@@ -35,6 +36,7 @@ const emits = defineEmits<{
 const canvasOptions = ref<CanvasOptions>({
   signaturePad: {
   },
+  dotSize: 0.5,
   minWidth: 2,
   maxWidth: 2,
   throttle: 16,
