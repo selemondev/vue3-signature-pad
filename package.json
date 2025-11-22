@@ -51,7 +51,7 @@
     "signature_pad": "^5.0.4"
   },
   "devDependencies": {
-    "@antfu/eslint-config": "^5.2.2",
+    "@antfu/eslint-config": "^6.2.0",
     "@vue/tsconfig": "^0.7.0",
     "eslint": "^9.17.0",
     "tsdown": "^0.16.6",
