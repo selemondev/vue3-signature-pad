@@ -10,7 +10,7 @@ importers:
     dependencies:
       signature_pad:
         specifier: ^5.0.4
-        version: 5.1.0
+        version: 5.1.3
     devDependencies:
       '@antfu/eslint-config':
         specifier: ^5.2.2
@@ -2253,8 +2253,8 @@ packages:
     resolution: {integrity: sha512-bzyZ1e88w9O1iNJbKnOlvYTrWPDl46O1bG0D3XInv+9tkPrxrN8jUUTiFlDkkmKWgn1M6CfIA13SuGqOa9Korw==}
     engines: {node: '>=14'}
 
-  signature_pad@5.1.0:
-    resolution: {integrity: sha512-h9rIm0vZggb/wWiajLzrH0Md+YntTHIo2dUFm6mfYAIItD75yzpiIHa1HcRA9NhQqPBix2KF8TIIA9vaokomBw==}
+  signature_pad@5.1.3:
+    resolution: {integrity: sha512-zyxW5vuJVnQdGcU+kAj9FYl7WaAunY3kA5S7mPg0xJiujL9+sPAWfSQHS5tXaJXDUa4FuZeKhfdCDQ6K3wfkpQ==}
 
   sisteransi@1.0.5:
     resolution: {integrity: sha512-bLGGlR1QxBcynn2d5YmDX4MGjlZvy2MRBDRNHLJ8VI6l6+9FUiyTFNJ0IveOSP0bcXgVDPRcfGqA0pjaqUpfVg==}
@@ -3133,7 +3133,7 @@ snapshots:
 
   '@selemondev/vue3-signature-pad@1.6.3(vue@3.5.21(typescript@5.9.2))':
     dependencies:
-      signature_pad: 5.1.0
+      signature_pad: 5.1.3
       vue: 3.5.21(typescript@5.9.2)
 
   '@shikijs/core@3.14.0':
@@ -4951,7 +4951,7 @@ snapshots:
 
   signal-exit@4.1.0: {}
 
-  signature_pad@5.1.0: {}
+  signature_pad@5.1.3: {}
 
   sisteransi@1.0.5: {}
 
