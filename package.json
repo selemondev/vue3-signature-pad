@@ -44,7 +44,7 @@
 		"unplugin-vue": "^7.1.0"
 	},
 	"devDependencies": {
-		"@biomejs/biome": "2.3.10",
+		"@biomejs/biome": "2.3.11",
 		"@vue/tsconfig": "^0.8.0",
 		"shiki": "^3.21.0",
 		"tsdown": "0.20.0-beta.3",
