@@ -49,7 +49,7 @@
 		"@vue/tsconfig": "^0.8.0",
 		"shiki": "^3.21.0",
 		"tsdown": "0.20.0-beta.3",
-		"typescript": "5.8.3",
+		"typescript": "5.9.3",
 		"vue": "^3.5.26",
 		"vue-tsc": "^3.1.0"
 	},
