@@ -4,7 +4,7 @@
 	"version": "1.8.2",
 	"private": false,
 	"license": "MIT",
-	"packageManager": "pnpm@10.28.0",
+	"packageManager": "pnpm@10.28.2",
 	"description": "Vue 3 based smooth signature drawing component ✨",
 	"author": "Selemondev",
 	"homepage": "https://github.com/selemondev/vue3-signature-pad#readme",
