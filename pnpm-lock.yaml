@@ -20,25 +20,25 @@ importers:
         version: 25.6.0
       '@vue/tsconfig':
         specifier: ^0.9.1
-        version: 0.9.1(typescript@5.8.3)(vue@3.5.32(typescript@5.8.3))
+        version: 0.9.1(typescript@6.0.3)(vue@3.5.32(typescript@6.0.3))
       shiki:
         specifier: ^3.23.0
         version: 3.23.0
       tsdown:
         specifier: 0.20.0-beta.3
-        version: 0.20.0-beta.3(@emnapi/core@1.9.2)(@emnapi/runtime@1.10.0)(typescript@5.8.3)(vue-tsc@3.2.6(typescript@5.8.3))
+        version: 0.20.0-beta.3(@emnapi/core@1.9.2)(@emnapi/runtime@1.10.0)(typescript@6.0.3)(vue-tsc@3.2.6(typescript@6.0.3))
       typescript:
-        specifier: 5.8.3
-        version: 5.8.3
+        specifier: 6.0.3
+        version: 6.0.3
       unplugin-vue:
         specifier: ^7.1.1
-        version: 7.1.1(@types/node@25.6.0)(esbuild@0.27.7)(jiti@2.6.1)(vue@3.5.32(typescript@5.8.3))
+        version: 7.1.1(@types/node@25.6.0)(esbuild@0.27.7)(jiti@2.6.1)(vue@3.5.32(typescript@6.0.3))
       vue:
         specifier: ^3.5.32
-        version: 3.5.32(typescript@5.8.3)
+        version: 3.5.32(typescript@6.0.3)
       vue-tsc:
         specifier: ^3.2.6
-        version: 3.2.6(typescript@5.8.3)
+        version: 3.2.6(typescript@6.0.3)
 
   www:
     dependencies:
@@ -47,10 +47,10 @@ importers:
         version: 4.4.2(@types/node@25.6.0)(@types/react-dom@19.2.3(@types/react@19.2.14))(@types/react@19.2.14)(jiti@2.6.1)(lightningcss@1.32.0)(react-dom@19.2.5(react@19.2.5))(react@19.2.5)
       '@astrojs/vercel':
         specifier: ^9.0.2
-        version: 9.0.5(astro@5.18.1(@types/node@25.6.0)(@vercel/functions@2.2.13)(jiti@2.6.1)(lightningcss@1.32.0)(rollup@4.60.2)(typescript@5.8.3))(react@19.2.5)(rollup@4.60.2)(vue@3.5.32(typescript@5.8.3))
+        version: 9.0.5(astro@5.18.1(@types/node@25.6.0)(@vercel/functions@2.2.13)(jiti@2.6.1)(lightningcss@1.32.0)(rollup@4.60.2)(typescript@6.0.3))(react@19.2.5)(rollup@4.60.2)(vue@3.5.32(typescript@6.0.3))
       '@astrojs/vue':
         specifier: ^5.1.3
-        version: 5.1.4(@types/node@25.6.0)(astro@5.18.1(@types/node@25.6.0)(@vercel/functions@2.2.13)(jiti@2.6.1)(lightningcss@1.32.0)(rollup@4.60.2)(typescript@5.8.3))(jiti@2.6.1)(lightningcss@1.32.0)(rollup@4.60.2)(vue@3.5.32(typescript@5.8.3))
+        version: 5.1.4(@types/node@25.6.0)(astro@5.18.1(@types/node@25.6.0)(@vercel/functions@2.2.13)(jiti@2.6.1)(lightningcss@1.32.0)(rollup@4.60.2)(typescript@6.0.3))(jiti@2.6.1)(lightningcss@1.32.0)(rollup@4.60.2)(vue@3.5.32(typescript@6.0.3))
       '@radix-ui/react-dialog':
         specifier: ^1.1.15
         version: 1.1.15(@types/react-dom@19.2.3(@types/react@19.2.14))(@types/react@19.2.14)(react-dom@19.2.5(react@19.2.5))(react@19.2.5)
@@ -74,7 +74,7 @@ importers:
         version: 4.2.2(vite@8.0.8(@types/node@25.6.0)(esbuild@0.27.7)(jiti@2.6.1))
       astro:
         specifier: ^5.16.5
-        version: 5.18.1(@types/node@25.6.0)(@vercel/functions@2.2.13)(jiti@2.6.1)(lightningcss@1.32.0)(rollup@4.60.2)(typescript@5.8.3)
+        version: 5.18.1(@types/node@25.6.0)(@vercel/functions@2.2.13)(jiti@2.6.1)(lightningcss@1.32.0)(rollup@4.60.2)(typescript@6.0.3)
       class-variance-authority:
         specifier: ^0.7.1
         version: 0.7.1
@@ -95,7 +95,7 @@ importers:
         version: 19.2.5(react@19.2.5)
       reka-ui:
         specifier: ^2.6.1
-        version: 2.9.6(vue@3.5.32(typescript@5.8.3))
+        version: 2.9.6(vue@3.5.32(typescript@6.0.3))
       tailwind-merge:
         specifier: ^3.4.0
         version: 3.5.0
@@ -3414,8 +3414,8 @@ packages:
     resolution: {integrity: sha512-TeTSQ6H5YHvpqVwBRcnLDCBnDOHWYu7IvGbHT6N8AOymcr9PJGjc1GTtiWZTYg0NCgYwvnYWEkVChQAr9bjfwA==}
     engines: {node: '>=16'}
 
-  typescript@5.8.3:
-    resolution: {integrity: sha512-p1diW6TqL9L07nNxvRMM7hMMw4c5XOo/1ibL4aAIGmSAt9slTE1Xgw5KWuof2uTOvCg9BY7ZRi+GaF+7sfgPeQ==}
+  typescript@6.0.3:
+    resolution: {integrity: sha512-y2TvuxSZPDyQakkFRPZHKFm+KKVqIisdg9/CZwm9ftvKXLP8NRWj38/ODjNbr43SsoXqNuAisEf1GdCxqWcdBw==}
     engines: {node: '>=14.17'}
     hasBin: true
 
@@ -3897,14 +3897,14 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  '@astrojs/vercel@9.0.5(astro@5.18.1(@types/node@25.6.0)(@vercel/functions@2.2.13)(jiti@2.6.1)(lightningcss@1.32.0)(rollup@4.60.2)(typescript@5.8.3))(react@19.2.5)(rollup@4.60.2)(vue@3.5.32(typescript@5.8.3))':
+  '@astrojs/vercel@9.0.5(astro@5.18.1(@types/node@25.6.0)(@vercel/functions@2.2.13)(jiti@2.6.1)(lightningcss@1.32.0)(rollup@4.60.2)(typescript@6.0.3))(react@19.2.5)(rollup@4.60.2)(vue@3.5.32(typescript@6.0.3))':
     dependencies:
       '@astrojs/internal-helpers': 0.7.6
-      '@vercel/analytics': 1.6.1(react@19.2.5)(vue@3.5.32(typescript@5.8.3))
+      '@vercel/analytics': 1.6.1(react@19.2.5)(vue@3.5.32(typescript@6.0.3))
       '@vercel/functions': 2.2.13
       '@vercel/nft': 0.30.4(rollup@4.60.2)
       '@vercel/routing-utils': 5.3.3
-      astro: 5.18.1(@types/node@25.6.0)(@vercel/functions@2.2.13)(jiti@2.6.1)(lightningcss@1.32.0)(rollup@4.60.2)(typescript@5.8.3)
+      astro: 5.18.1(@types/node@25.6.0)(@vercel/functions@2.2.13)(jiti@2.6.1)(lightningcss@1.32.0)(rollup@4.60.2)(typescript@6.0.3)
       esbuild: 0.25.12
       tinyglobby: 0.2.16
     transitivePeerDependencies:
@@ -3920,15 +3920,15 @@ snapshots:
       - vue
       - vue-router
 
-  '@astrojs/vue@5.1.4(@types/node@25.6.0)(astro@5.18.1(@types/node@25.6.0)(@vercel/functions@2.2.13)(jiti@2.6.1)(lightningcss@1.32.0)(rollup@4.60.2)(typescript@5.8.3))(jiti@2.6.1)(lightningcss@1.32.0)(rollup@4.60.2)(vue@3.5.32(typescript@5.8.3))':
+  '@astrojs/vue@5.1.4(@types/node@25.6.0)(astro@5.18.1(@types/node@25.6.0)(@vercel/functions@2.2.13)(jiti@2.6.1)(lightningcss@1.32.0)(rollup@4.60.2)(typescript@6.0.3))(jiti@2.6.1)(lightningcss@1.32.0)(rollup@4.60.2)(vue@3.5.32(typescript@6.0.3))':
     dependencies:
-      '@vitejs/plugin-vue': 5.2.4(vite@6.4.2(@types/node@25.6.0)(jiti@2.6.1)(lightningcss@1.32.0))(vue@3.5.32(typescript@5.8.3))
-      '@vitejs/plugin-vue-jsx': 4.2.0(vite@6.4.2(@types/node@25.6.0)(jiti@2.6.1)(lightningcss@1.32.0))(vue@3.5.32(typescript@5.8.3))
+      '@vitejs/plugin-vue': 5.2.4(vite@6.4.2(@types/node@25.6.0)(jiti@2.6.1)(lightningcss@1.32.0))(vue@3.5.32(typescript@6.0.3))
+      '@vitejs/plugin-vue-jsx': 4.2.0(vite@6.4.2(@types/node@25.6.0)(jiti@2.6.1)(lightningcss@1.32.0))(vue@3.5.32(typescript@6.0.3))
       '@vue/compiler-sfc': 3.5.32
-      astro: 5.18.1(@types/node@25.6.0)(@vercel/functions@2.2.13)(jiti@2.6.1)(lightningcss@1.32.0)(rollup@4.60.2)(typescript@5.8.3)
+      astro: 5.18.1(@types/node@25.6.0)(@vercel/functions@2.2.13)(jiti@2.6.1)(lightningcss@1.32.0)(rollup@4.60.2)(typescript@6.0.3)
       vite: 6.4.2(@types/node@25.6.0)(jiti@2.6.1)(lightningcss@1.32.0)
-      vite-plugin-vue-devtools: 7.7.9(rollup@4.60.2)(vite@6.4.2(@types/node@25.6.0)(jiti@2.6.1)(lightningcss@1.32.0))(vue@3.5.32(typescript@5.8.3))
-      vue: 3.5.32(typescript@5.8.3)
+      vite-plugin-vue-devtools: 7.7.9(rollup@4.60.2)(vite@6.4.2(@types/node@25.6.0)(jiti@2.6.1)(lightningcss@1.32.0))(vue@3.5.32(typescript@6.0.3))
+      vue: 3.5.32(typescript@6.0.3)
     transitivePeerDependencies:
       - '@nuxt/kit'
       - '@types/node'
@@ -4401,11 +4401,11 @@ snapshots:
 
   '@floating-ui/utils@0.2.11': {}
 
-  '@floating-ui/vue@1.1.11(vue@3.5.32(typescript@5.8.3))':
+  '@floating-ui/vue@1.1.11(vue@3.5.32(typescript@6.0.3))':
     dependencies:
       '@floating-ui/dom': 1.7.6
       '@floating-ui/utils': 0.2.11
-      vue-demi: 0.14.10(vue@3.5.32(typescript@5.8.3))
+      vue-demi: 0.14.10(vue@3.5.32(typescript@6.0.3))
     transitivePeerDependencies:
       - '@vue/composition-api'
       - vue
@@ -5234,10 +5234,10 @@ snapshots:
 
   '@tanstack/virtual-core@3.14.0': {}
 
-  '@tanstack/vue-virtual@3.13.24(vue@3.5.32(typescript@5.8.3))':
+  '@tanstack/vue-virtual@3.13.24(vue@3.5.32(typescript@6.0.3))':
     dependencies:
       '@tanstack/virtual-core': 3.14.0
-      vue: 3.5.32(typescript@5.8.3)
+      vue: 3.5.32(typescript@6.0.3)
 
   '@tybys/wasm-util@0.10.1':
     dependencies:
@@ -5305,10 +5305,10 @@ snapshots:
 
   '@ungap/structured-clone@1.3.0': {}
 
-  '@vercel/analytics@1.6.1(react@19.2.5)(vue@3.5.32(typescript@5.8.3))':
+  '@vercel/analytics@1.6.1(react@19.2.5)(vue@3.5.32(typescript@6.0.3))':
     optionalDependencies:
       react: 19.2.5
-      vue: 3.5.32(typescript@5.8.3)
+      vue: 3.5.32(typescript@6.0.3)
 
   '@vercel/functions@2.2.13':
     dependencies:
@@ -5357,21 +5357,21 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  '@vitejs/plugin-vue-jsx@4.2.0(vite@6.4.2(@types/node@25.6.0)(jiti@2.6.1)(lightningcss@1.32.0))(vue@3.5.32(typescript@5.8.3))':
+  '@vitejs/plugin-vue-jsx@4.2.0(vite@6.4.2(@types/node@25.6.0)(jiti@2.6.1)(lightningcss@1.32.0))(vue@3.5.32(typescript@6.0.3))':
     dependencies:
       '@babel/core': 7.29.0
       '@babel/plugin-transform-typescript': 7.28.6(@babel/core@7.29.0)
       '@rolldown/pluginutils': 1.0.0-rc.16
       '@vue/babel-plugin-jsx': 1.5.0(@babel/core@7.29.0)
       vite: 6.4.2(@types/node@25.6.0)(jiti@2.6.1)(lightningcss@1.32.0)
-      vue: 3.5.32(typescript@5.8.3)
+      vue: 3.5.32(typescript@6.0.3)
     transitivePeerDependencies:
       - supports-color
 
-  '@vitejs/plugin-vue@5.2.4(vite@6.4.2(@types/node@25.6.0)(jiti@2.6.1)(lightningcss@1.32.0))(vue@3.5.32(typescript@5.8.3))':
+  '@vitejs/plugin-vue@5.2.4(vite@6.4.2(@types/node@25.6.0)(jiti@2.6.1)(lightningcss@1.32.0))(vue@3.5.32(typescript@6.0.3))':
     dependencies:
       vite: 6.4.2(@types/node@25.6.0)(jiti@2.6.1)(lightningcss@1.32.0)
-      vue: 3.5.32(typescript@5.8.3)
+      vue: 3.5.32(typescript@6.0.3)
 
   '@volar/language-core@2.4.28':
     dependencies:
@@ -5444,7 +5444,7 @@ snapshots:
       '@vue/compiler-dom': 3.5.32
       '@vue/shared': 3.5.32
 
-  '@vue/devtools-core@7.7.9(vite@6.4.2(@types/node@25.6.0)(jiti@2.6.1)(lightningcss@1.32.0))(vue@3.5.32(typescript@5.8.3))':
+  '@vue/devtools-core@7.7.9(vite@6.4.2(@types/node@25.6.0)(jiti@2.6.1)(lightningcss@1.32.0))(vue@3.5.32(typescript@6.0.3))':
     dependencies:
       '@vue/devtools-kit': 7.7.9
       '@vue/devtools-shared': 7.7.9
@@ -5452,7 +5452,7 @@ snapshots:
       nanoid: 5.1.9
       pathe: 2.0.3
       vite-hot-client: 2.1.0(vite@6.4.2(@types/node@25.6.0)(jiti@2.6.1)(lightningcss@1.32.0))
-      vue: 3.5.32(typescript@5.8.3)
+      vue: 3.5.32(typescript@6.0.3)
     transitivePeerDependencies:
       - vite
 
@@ -5496,31 +5496,31 @@ snapshots:
       '@vue/shared': 3.5.32
       csstype: 3.2.3
 
-  '@vue/server-renderer@3.5.32(vue@3.5.32(typescript@5.8.3))':
+  '@vue/server-renderer@3.5.32(vue@3.5.32(typescript@6.0.3))':
     dependencies:
       '@vue/compiler-ssr': 3.5.32
       '@vue/shared': 3.5.32
-      vue: 3.5.32(typescript@5.8.3)
+      vue: 3.5.32(typescript@6.0.3)
 
   '@vue/shared@3.5.32': {}
 
-  '@vue/tsconfig@0.9.1(typescript@5.8.3)(vue@3.5.32(typescript@5.8.3))':
+  '@vue/tsconfig@0.9.1(typescript@6.0.3)(vue@3.5.32(typescript@6.0.3))':
     optionalDependencies:
-      typescript: 5.8.3
-      vue: 3.5.32(typescript@5.8.3)
+      typescript: 6.0.3
+      vue: 3.5.32(typescript@6.0.3)
 
-  '@vueuse/core@14.2.1(vue@3.5.32(typescript@5.8.3))':
+  '@vueuse/core@14.2.1(vue@3.5.32(typescript@6.0.3))':
     dependencies:
       '@types/web-bluetooth': 0.0.21
       '@vueuse/metadata': 14.2.1
-      '@vueuse/shared': 14.2.1(vue@3.5.32(typescript@5.8.3))
-      vue: 3.5.32(typescript@5.8.3)
+      '@vueuse/shared': 14.2.1(vue@3.5.32(typescript@6.0.3))
+      vue: 3.5.32(typescript@6.0.3)
 
   '@vueuse/metadata@14.2.1': {}
 
-  '@vueuse/shared@14.2.1(vue@3.5.32(typescript@5.8.3))':
+  '@vueuse/shared@14.2.1(vue@3.5.32(typescript@6.0.3))':
     dependencies:
-      vue: 3.5.32(typescript@5.8.3)
+      vue: 3.5.32(typescript@6.0.3)
 
   abbrev@3.0.1: {}
 
@@ -5579,7 +5579,7 @@ snapshots:
       estree-walker: 3.0.3
       pathe: 2.0.3
 
-  astro@5.18.1(@types/node@25.6.0)(@vercel/functions@2.2.13)(jiti@2.6.1)(lightningcss@1.32.0)(rollup@4.60.2)(typescript@5.8.3):
+  astro@5.18.1(@types/node@25.6.0)(@vercel/functions@2.2.13)(jiti@2.6.1)(lightningcss@1.32.0)(rollup@4.60.2)(typescript@6.0.3):
     dependencies:
       '@astrojs/compiler': 2.13.1
       '@astrojs/internal-helpers': 0.7.6
@@ -5630,7 +5630,7 @@ snapshots:
       svgo: 4.0.1
       tinyexec: 1.1.1
       tinyglobby: 0.2.16
-      tsconfck: 3.1.6(typescript@5.8.3)
+      tsconfck: 3.1.6(typescript@6.0.3)
       ultrahtml: 1.6.0
       unifont: 0.7.4
       unist-util-visit: 5.1.0
@@ -5643,7 +5643,7 @@ snapshots:
       yocto-spinner: 0.2.3
       zod: 3.25.76
       zod-to-json-schema: 3.25.2(zod@3.25.76)
-      zod-to-ts: 1.2.0(typescript@5.8.3)(zod@3.25.76)
+      zod-to-ts: 1.2.0(typescript@6.0.3)(zod@3.25.76)
     optionalDependencies:
       sharp: 0.34.5
     transitivePeerDependencies:
@@ -6872,19 +6872,19 @@ snapshots:
       rehype-stringify: 10.0.1
       unified: 11.0.5
 
-  reka-ui@2.9.6(vue@3.5.32(typescript@5.8.3)):
+  reka-ui@2.9.6(vue@3.5.32(typescript@6.0.3)):
     dependencies:
       '@floating-ui/dom': 1.7.6
-      '@floating-ui/vue': 1.1.11(vue@3.5.32(typescript@5.8.3))
+      '@floating-ui/vue': 1.1.11(vue@3.5.32(typescript@6.0.3))
       '@internationalized/date': 3.12.1
       '@internationalized/number': 3.6.6
-      '@tanstack/vue-virtual': 3.13.24(vue@3.5.32(typescript@5.8.3))
-      '@vueuse/core': 14.2.1(vue@3.5.32(typescript@5.8.3))
-      '@vueuse/shared': 14.2.1(vue@3.5.32(typescript@5.8.3))
+      '@tanstack/vue-virtual': 3.13.24(vue@3.5.32(typescript@6.0.3))
+      '@vueuse/core': 14.2.1(vue@3.5.32(typescript@6.0.3))
+      '@vueuse/shared': 14.2.1(vue@3.5.32(typescript@6.0.3))
       aria-hidden: 1.2.6
       defu: 6.1.7
       ohash: 2.0.11
-      vue: 3.5.32(typescript@5.8.3)
+      vue: 3.5.32(typescript@6.0.3)
     transitivePeerDependencies:
       - '@vue/composition-api'
 
@@ -6960,7 +6960,7 @@ snapshots:
 
   rfdc@1.4.1: {}
 
-  rolldown-plugin-dts@0.21.9(rolldown@1.0.0-beta.60(@emnapi/core@1.9.2)(@emnapi/runtime@1.10.0))(typescript@5.8.3)(vue-tsc@3.2.6(typescript@5.8.3)):
+  rolldown-plugin-dts@0.21.9(rolldown@1.0.0-beta.60(@emnapi/core@1.9.2)(@emnapi/runtime@1.10.0))(typescript@6.0.3)(vue-tsc@3.2.6(typescript@6.0.3)):
     dependencies:
       '@babel/generator': 8.0.0-rc.1
       '@babel/parser': 8.0.0-rc.1
@@ -6972,8 +6972,8 @@ snapshots:
       obug: 2.1.1
       rolldown: 1.0.0-beta.60(@emnapi/core@1.9.2)(@emnapi/runtime@1.10.0)
     optionalDependencies:
-      typescript: 5.8.3
-      vue-tsc: 3.2.6(typescript@5.8.3)
+      typescript: 6.0.3
+      vue-tsc: 3.2.6(typescript@6.0.3)
     transitivePeerDependencies:
       - oxc-resolver
 
@@ -7231,11 +7231,11 @@ snapshots:
 
   trough@2.2.0: {}
 
-  tsconfck@3.1.6(typescript@5.8.3):
+  tsconfck@3.1.6(typescript@6.0.3):
     optionalDependencies:
-      typescript: 5.8.3
+      typescript: 6.0.3
 
-  tsdown@0.20.0-beta.3(@emnapi/core@1.9.2)(@emnapi/runtime@1.10.0)(typescript@5.8.3)(vue-tsc@3.2.6(typescript@5.8.3)):
+  tsdown@0.20.0-beta.3(@emnapi/core@1.9.2)(@emnapi/runtime@1.10.0)(typescript@6.0.3)(vue-tsc@3.2.6(typescript@6.0.3)):
     dependencies:
       ansis: 4.2.0
       cac: 6.7.14
@@ -7246,7 +7246,7 @@ snapshots:
       obug: 2.1.1
       picomatch: 4.0.4
       rolldown: 1.0.0-beta.60(@emnapi/core@1.9.2)(@emnapi/runtime@1.10.0)
-      rolldown-plugin-dts: 0.21.9(rolldown@1.0.0-beta.60(@emnapi/core@1.9.2)(@emnapi/runtime@1.10.0))(typescript@5.8.3)(vue-tsc@3.2.6(typescript@5.8.3))
+      rolldown-plugin-dts: 0.21.9(rolldown@1.0.0-beta.60(@emnapi/core@1.9.2)(@emnapi/runtime@1.10.0))(typescript@6.0.3)(vue-tsc@3.2.6(typescript@6.0.3))
       semver: 7.7.4
       tinyexec: 1.1.1
       tinyglobby: 0.2.16
@@ -7254,7 +7254,7 @@ snapshots:
       unconfig-core: 7.5.0
       unrun: 0.2.36
     optionalDependencies:
-      typescript: 5.8.3
+      typescript: 6.0.3
     transitivePeerDependencies:
       - '@emnapi/core'
       - '@emnapi/runtime'
@@ -7268,7 +7268,7 @@ snapshots:
 
   type-fest@4.41.0: {}
 
-  typescript@5.8.3: {}
+  typescript@6.0.3: {}
 
   ufo@1.6.3: {}
 
@@ -7345,7 +7345,7 @@ snapshots:
 
   universalify@2.0.1: {}
 
-  unplugin-vue@7.1.1(@types/node@25.6.0)(esbuild@0.27.7)(jiti@2.6.1)(vue@3.5.32(typescript@5.8.3)):
+  unplugin-vue@7.1.1(@types/node@25.6.0)(esbuild@0.27.7)(jiti@2.6.1)(vue@3.5.32(typescript@6.0.3)):
     dependencies:
       '@jridgewell/gen-mapping': 0.3.13
       '@jridgewell/trace-mapping': 0.3.31
@@ -7353,7 +7353,7 @@ snapshots:
       obug: 2.1.1
       unplugin: 3.0.0
       vite: 8.0.8(@types/node@25.6.0)(esbuild@0.27.7)(jiti@2.6.1)
-      vue: 3.5.32(typescript@5.8.3)
+      vue: 3.5.32(typescript@6.0.3)
     transitivePeerDependencies:
       - '@types/node'
       - '@vitejs/devtools'
@@ -7452,9 +7452,9 @@ snapshots:
       - rollup
       - supports-color
 
-  vite-plugin-vue-devtools@7.7.9(rollup@4.60.2)(vite@6.4.2(@types/node@25.6.0)(jiti@2.6.1)(lightningcss@1.32.0))(vue@3.5.32(typescript@5.8.3)):
+  vite-plugin-vue-devtools@7.7.9(rollup@4.60.2)(vite@6.4.2(@types/node@25.6.0)(jiti@2.6.1)(lightningcss@1.32.0))(vue@3.5.32(typescript@6.0.3)):
     dependencies:
-      '@vue/devtools-core': 7.7.9(vite@6.4.2(@types/node@25.6.0)(jiti@2.6.1)(lightningcss@1.32.0))(vue@3.5.32(typescript@5.8.3))
+      '@vue/devtools-core': 7.7.9(vite@6.4.2(@types/node@25.6.0)(jiti@2.6.1)(lightningcss@1.32.0))(vue@3.5.32(typescript@6.0.3))
       '@vue/devtools-kit': 7.7.9
       '@vue/devtools-shared': 7.7.9
       execa: 9.6.1
@@ -7516,25 +7516,25 @@ snapshots:
 
   vscode-uri@3.1.0: {}
 
-  vue-demi@0.14.10(vue@3.5.32(typescript@5.8.3)):
+  vue-demi@0.14.10(vue@3.5.32(typescript@6.0.3)):
     dependencies:
-      vue: 3.5.32(typescript@5.8.3)
+      vue: 3.5.32(typescript@6.0.3)
 
-  vue-tsc@3.2.6(typescript@5.8.3):
+  vue-tsc@3.2.6(typescript@6.0.3):
     dependencies:
       '@volar/typescript': 2.4.28
       '@vue/language-core': 3.2.6
-      typescript: 5.8.3
+      typescript: 6.0.3
 
-  vue@3.5.32(typescript@5.8.3):
+  vue@3.5.32(typescript@6.0.3):
     dependencies:
       '@vue/compiler-dom': 3.5.32
       '@vue/compiler-sfc': 3.5.32
       '@vue/runtime-dom': 3.5.32
-      '@vue/server-renderer': 3.5.32(vue@3.5.32(typescript@5.8.3))
+      '@vue/server-renderer': 3.5.32(vue@3.5.32(typescript@6.0.3))
       '@vue/shared': 3.5.32
     optionalDependencies:
-      typescript: 5.8.3
+      typescript: 6.0.3
 
   web-namespaces@2.0.1: {}
 
@@ -7599,9 +7599,9 @@ snapshots:
     dependencies:
       zod: 3.25.76
 
-  zod-to-ts@1.2.0(typescript@5.8.3)(zod@3.25.76):
+  zod-to-ts@1.2.0(typescript@6.0.3)(zod@3.25.76):
     dependencies:
-      typescript: 5.8.3
+      typescript: 6.0.3
       zod: 3.25.76
 
   zod@3.25.76: {}
