@@ -44,7 +44,7 @@
     "@biomejs/biome": "2.3.10",
     "@types/node": "^25.6.0",
     "@vue/tsconfig": "^0.9.1",
-    "shiki": "^3.23.0",
+    "shiki": "^4.0.0",
     "tsdown": "0.20.0-beta.3",
     "typescript": "5.8.3",
     "unplugin-vue": "^7.1.1",
