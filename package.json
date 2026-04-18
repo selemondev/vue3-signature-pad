@@ -1,61 +1,57 @@
 {
-	"name": "@selemondev/vue3-signature-pad",
-	"type": "module",
-	"version": "1.8.6",
-	"private": false,
-	"license": "MIT",
-	"packageManager": "pnpm@10.32.1",
-	"description": "Vue 3 based smooth signature drawing component ✨",
-	"author": "Selemondev",
-	"homepage": "https://github.com/selemondev/vue3-signature-pad#readme",
-	"repository": {
-		"type": "git",
-		"url": "git+https://github.com/selemondev/vue3-signature-pad.git"
-	},
-	"bugs": {
-		"url": "https://github.com/selemondev/vue3-signature-pad/issues"
-	},
-	"sideEffects": false,
-	"exports": {
-		".": "./dist/index.js",
-		"./package.json": "./package.json"
-	},
-	"types": "./dist/index.d.ts",
-	"files": [
-		"dist"
-	],
-	"scripts": {
-		"build": "tsdown",
-		"build:site": "pnpm --filter www build",
-		"build:dts": "vue-tsc --declaration --emitDeclarationOnly",
-		"dev:lib": "tsdown --watch ./src/index.ts",
-		"dev:site": "pnpm --filter www dev",
-		"lint": "biome format --write",
-		"generate:release": "pnpx changelogen@latest --release",
-		"prepublishOnly": "pnpm build"
-	},
-	"dependencies": {
-		"@tailwindcss/vite": "^4.1.18",
-		"class-variance-authority": "^0.7.1",
-		"clsx": "^2.1.1",
-		"hastscript": "^9.0.1",
-		"signature_pad": "^5.1.3",
-		"tailwind-merge": "^3.4.0",
-		"tailwindcss": "^4.1.18",
-		"unplugin-vue": "^7.1.1"
-	},
-	"devDependencies": {
-		"@biomejs/biome": "2.3.10",
-		"@vue/tsconfig": "^0.9.0",
-		"shiki": "^3.21.0",
-		"tsdown": "0.20.0-beta.3",
-		"typescript": "5.8.3",
-		"vue": "^3.5.27",
-		"vue-tsc": "^3.2.4"
-	},
-	"peerDependencies": {
-		"@vue/tsconfig": "^0.8.0 || ^0.9.0",
-		"vue": "^3.5.17",
-		"vue-tsc": "^3.1.0"
-	}
+  "name": "@selemondev/vue3-signature-pad",
+  "type": "module",
+  "version": "1.8.6",
+  "private": false,
+  "license": "MIT",
+  "packageManager": "pnpm@10.33.0",
+  "description": "Vue 3 based smooth signature drawing component ✨",
+  "author": "Selemondev",
+  "homepage": "https://github.com/selemondev/vue3-signature-pad#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/selemondev/vue3-signature-pad.git"
+  },
+  "bugs": {
+    "url": "https://github.com/selemondev/vue3-signature-pad/issues"
+  },
+  "sideEffects": false,
+  "exports": {
+    ".": "./dist/index.js",
+    "./package.json": "./package.json"
+  },
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsdown",
+    "build:site": "pnpm --filter www build",
+    "build:dts": "vue-tsc --declaration --emitDeclarationOnly",
+    "dev:lib": "tsdown --watch ./src/index.ts",
+    "dev:site": "pnpm --filter www dev",
+    "lint": "biome format --write",
+    "generate:release": "pnpx changelogen@latest --release",
+    "update:deps": "pnpx taze@latest -w && pnpm i",
+    "prepublishOnly": "pnpm build"
+  },
+  "dependencies": {
+    "signature_pad": "^5.1.3"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "2.3.10",
+    "@types/node": "^25.6.0",
+    "@vue/tsconfig": "^0.9.1",
+    "shiki": "^3.23.0",
+    "tsdown": "0.20.0-beta.3",
+    "typescript": "5.8.3",
+    "unplugin-vue": "^7.1.1",
+    "vue": "^3.5.32",
+    "vue-tsc": "^3.2.6"
+  },
+  "peerDependencies": {
+    "@vue/tsconfig": "^0.8.0 || ^0.9.0",
+    "vue": "^3.5.17",
+    "vue-tsc": "^3.1.0"
+  }
 }
