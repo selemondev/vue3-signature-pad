@@ -12,8 +12,8 @@ import type {
 let canvas: HTMLCanvasElement;
 const props = withDefaults(defineProps<Props>(), {
 	throttle: 16,
-	minWidth: 5,
-	maxWidth: 5,
+	minWidth: 2,
+	maxWidth: 2,
 	height: "100%",
 	width: "100%",
 	options: () => ({
@@ -34,9 +34,9 @@ const emits = defineEmits<{
 const canvasOptions = ref<CanvasOptions>({
 	signaturePad: {} as Signature,
 	dotSize: 0.5,
-	minWidth: 2,
-	maxWidth: 2,
-	throttle: 16,
+	minWidth: props.minWidth,
+	maxWidth: props.maxWidth,
+	throttle: props.throttle,
 	backgroundColor: props.options.backgroundColor,
 	penColor: props.options.penColor,
 	canvasUuid: `canvas_${crypto.randomUUID()}`,
