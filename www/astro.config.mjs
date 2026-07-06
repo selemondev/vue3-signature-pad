@@ -10,7 +10,7 @@ const vueAppAlias = fileURLToPath(
 );
 export default defineConfig({
 	output: "server",
-	adapter: vercel(),
+	adapter: vercel({ entrypointResolution: "auto" }),
 	integrations: [vue(), react()],
 	devToolbar: {
 		enabled: false,
