@@ -1,6 +1,33 @@
 # Changelog
 
 
+## v1.10.0
+
+[compare changes](https://github.com/selemondev/vue3-signature-pad/compare/v1.9.0...v1.10.0)
+
+### 🩹 Fixes
+
+- Harden watermark handling in tests ([0aa1d81](https://github.com/selemondev/vue3-signature-pad/commit/0aa1d81))
+- **deps:** Update dependency lucide-react to v1 ([defe8fa](https://github.com/selemondev/vue3-signature-pad/commit/defe8fa))
+- **deps:** Update dependency astro to v6 [security] ([bd4ef15](https://github.com/selemondev/vue3-signature-pad/commit/bd4ef15))
+
+### 💅 Refactors
+
+- Vue components to astro components ([f478db2](https://github.com/selemondev/vue3-signature-pad/commit/f478db2))
+
+### 🏡 Chore
+
+- **deps-dev:** Bump tsdown from 0.20.0-beta.3 to 0.21.10 ([19eb829](https://github.com/selemondev/vue3-signature-pad/commit/19eb829))
+- **deps-dev:** Bump vue-tsc from 3.2.6 to 3.2.9 ([f9a70d6](https://github.com/selemondev/vue3-signature-pad/commit/f9a70d6))
+
+### ✅ Tests
+
+- Add component coverage ([228f616](https://github.com/selemondev/vue3-signature-pad/commit/228f616))
+
+### ❤️ Contributors
+
+- Selemondev
+
 ## v1.9.0
 
 [compare changes](https://github.com/selemondev/vue3-signature-pad/compare/v1.8.6...v1.9.0)
