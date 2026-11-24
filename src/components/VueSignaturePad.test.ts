@@ -334,4 +334,21 @@ describe("VueSignaturePad", () => {
 
 		expect(signaturePad.fromData).not.toHaveBeenCalled();
 	});
+
+	it("reacts to disabled prop updates", async () => {
+		const wrapper = await mountPad();
+		const signaturePad = getSignaturePad();
+
+		signaturePad.on.mockClear();
+		signaturePad.off.mockClear();
+
+		await wrapper.setProps({ disabled: true });
+
+		expect(signaturePad.off).toHaveBeenCalledTimes(1);
+		expect(signaturePad.on).not.toHaveBeenCalled();
+
+		await wrapper.setProps({ disabled: false });
+
+		expect(signaturePad.on).toHaveBeenCalledTimes(1);
+	});
 });
