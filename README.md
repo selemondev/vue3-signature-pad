@@ -154,3 +154,7 @@ function handleUndo() {
 - [Signature Pad](https://github.com/szimek/signature_pad)
 
 - [Vue 3 Signature](https://github.com/WangShayne/vue3-signature) - Vue 3 Signature Pad is an enhanced version of Vue 3 Signature with type safety and more options.
+
+## License
+
+[MIT](./LICENSE) © [Selemon Brahanu](https://selemon.dev)
