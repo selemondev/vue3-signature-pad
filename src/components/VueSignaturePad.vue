@@ -233,6 +233,20 @@ onBeforeUnmount(() => {
 });
 
 watch(
+	() => props.disabled,
+	(disabled) => {
+		const signaturePad = canvasOptions.value.signaturePad;
+		if (!signaturePad.on || !signaturePad.off) return;
+
+		if (disabled) {
+			signaturePad.off();
+		} else {
+			signaturePad.on();
+		}
+	},
+);
+
+watch(
 	() => props,
 	(val) => {
 		canvasOptions.value.signaturePad.penColor =
